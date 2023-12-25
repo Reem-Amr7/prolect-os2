@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+
+
+metadata:
+  name: imagekube
+
+
+spec:
+  selector:
+    matchLabels:
+      app: Muhammad
+      
+  replicas: 2
+  template:
+    metadata:
+      name: my-first-pod
+      labels:
+        app: Muhammad
+    spec:
+      containers:
+        - image:  reemar87/nginx-test
+          name: nginx-container
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "1"     
+            requests: 
+              memory: "100Mi" 

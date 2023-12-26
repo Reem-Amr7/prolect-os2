@@ -3,23 +3,23 @@ kind: Deployment
 
 
 metadata:
-  name: imagekube
+  name: project-os2
 
 
 spec:
   selector:
     matchLabels:
-      app: Muhammad
+      app: reem
       
-  replicas: 2
+  replicas: 3
   template:
     metadata:
       name: my-first-pod
       labels:
-        app: Muhammad
+        app: reem
     spec:
       containers:
-        - image:  reemar87/nginx-test
+        - image:  reemar87/nginx-testt
           name: nginx-container
           resources:
             limits:
